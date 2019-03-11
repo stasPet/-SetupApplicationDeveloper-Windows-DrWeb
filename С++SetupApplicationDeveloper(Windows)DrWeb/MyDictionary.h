@@ -2,12 +2,13 @@
 #define DEFINE_MY_DICTIONARY
 
 #include "Dictionary.h"
+#include "TernaryTree.h"
 
 template<class TKey, class TValue>
-class MyDictionary: public Dictionary
+class MyDictionary: public Dictionary<TKey, TValue>
 {
 private:
-
+    TernaryTree<TKey, TValue> ternaryTree;
 
 public:
     virtual ~MyDictionary() = default;
