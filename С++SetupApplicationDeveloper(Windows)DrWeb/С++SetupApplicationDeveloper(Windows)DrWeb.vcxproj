@@ -116,6 +116,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Dictionary.h" />
+    <ClInclude Include="TernaryTree.h" />
     <ClInclude Include="MyDictionary.h" />
     <ClInclude Include="NotFoundException.h" />
   </ItemGroup>
