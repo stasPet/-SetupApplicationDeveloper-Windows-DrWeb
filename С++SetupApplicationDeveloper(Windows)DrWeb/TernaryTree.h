@@ -29,7 +29,7 @@ public:
     ~TernaryTree();
 
     /*
-        În development stage.
+        On development stage.
 
         TernaryTree(TernaryTree&);
         TernaryTree(const TernaryTree&&);
