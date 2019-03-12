@@ -44,10 +44,10 @@ public:
     */
 
     void Insert(TKey const&, TValue const&,
-                typename TKey::size_type i = 0);
+        typename TKey::size_type i = 0);
     
     const TValue* Search(TKey const&,
-                        typename TKey::size_type i = 0) const;
+        typename TKey::size_type i = 0) const;
 
 };
 
@@ -60,7 +60,7 @@ inline TernaryTree<TKey, TValue>::TernaryTree() noexcept:
 
 template<class TKey, class TValue>
 TernaryTree<TKey, TValue>::TernaryTree(TKey const& k, TValue const& v,
-                                     typename TKey::size_type i)
+    typename TKey::size_type i)
 {
     split = k[i++];
 
@@ -80,7 +80,7 @@ TernaryTree<TKey, TValue>::~TernaryTree()
 
 template<class TKey, class TValue>
 void TernaryTree<TKey, TValue>::Insert(TKey const& k, TValue const& v,
-                                       typename TKey::size_type i)
+    typename TKey::size_type i)
 {
     if (k[i] < split)
     {
@@ -116,7 +116,7 @@ void TernaryTree<TKey, TValue>::Insert(TKey const& k, TValue const& v,
 
 template<class TKey,class TValue>
 inline const TValue* TernaryTree<TKey,TValue>::Search(TKey const& k,
-                                                     typename TKey::size_type i) const
+    typename TKey::size_type i) const
 {
     if (k[i] < split)
     {
@@ -130,7 +130,6 @@ inline const TValue* TernaryTree<TKey,TValue>::Search(TKey const& k,
     }
     else
     {
-        // Word root checking.
         if (++i == k.size() )
         {
             if (!value.empty() )
