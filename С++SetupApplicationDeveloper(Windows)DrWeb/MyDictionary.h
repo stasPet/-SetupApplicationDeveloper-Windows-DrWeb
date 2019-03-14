@@ -56,7 +56,7 @@ public:
 
 template<class TKey, class TValue>
 inline MyDictionary<TKey, TValue>::MyDictionary() noexcept:
-    left{nullptr}, right{nullptr}, middle{nullptr}
+    left{nullptr}, right{nullptr}, middle{nullptr}, split{0}
 {
     // To initialize fields with zero.
 }
